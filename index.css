@@ -147,7 +147,13 @@ footer
 h3
 {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 35px;
+    font-size: 40px;
+}
+
+#lizzy-image
+{
+    width: 100%;
+    /* image-orientation: flip; */
 }
 
 #gal-description
