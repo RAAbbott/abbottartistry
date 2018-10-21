@@ -1,15 +1,33 @@
-html,body
+@media only screen and (min-width: 1500px)
+{ 
+
+    #welcome
+    {
+        height:700px;
+    }
+
+    #about-section
+    {
+        margin-left:25%;
+        margin-right:25%;
+    }
+}
+
+
+
+html
 {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 body 
 {
-    background-color: rgb(252, 252, 239);
+    /* background-color: rgb(252, 252, 239); */
+    background-color: white;
 }
 
 .good-text
@@ -45,10 +63,13 @@ body
     border-width: 2px;
 }
 
-.fa
+@media only screen and (min-width: 600px)
 {
-    margin: 8px;
-    text-align: center;
+    .fa
+    {
+        margin: 8px;
+        text-align: center;
+    } 
 }
 
 .welcome 
@@ -89,6 +110,7 @@ body
 .white
 {
     background-color: white;
+    /* background-image: url('./image-assets/cactus-background.jpg') */
 }
 
 .about
@@ -103,16 +125,11 @@ body
 
 .gallery-preview
 {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 0px;
     margin-bottom: 0px;
-    background-color: white;
-}
-
-footer
-{
-    background-color: white;
+    /* background-color: white; */
 }
 
 h3
@@ -123,13 +140,14 @@ h3
 
 #gal-image
 {
-    width: 100%;
-    float: right;
+    width: 90%;
+    float: none;
     top: 0px;
     border-style: hidden;
     border-radius: 10px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0);
 }
+
 
 #main-logo
 {
@@ -188,10 +206,151 @@ h3
     margin-right: 5%;
 }
 
-footer
+.footer
 {
-    background-color: rgb(252, 252, 239);
+    /* background-color: rgb(252, 252, 239); */
+    background-color: #666;
+    color:white !important;
 }
+
+.collapsible .collapsible-body p
+{
+    color: #666;
+}
+
+#phone
+{
+    display:none;
+}
+
+.header-small
+{
+    height:auto;
+    display:none;
+}
+
+/* .fa-bars
+{
+    position: relative;
+    top:40%;
+} */
+
+#big-social
+{
+    display:none;
+}
+
+#small-social
+{
+    display:none;
+}
+
+#stacked-social
+{
+    display:none;
+}
+
+@media only screen and (max-width: 575px)
+{
+    #gal-image
+    {
+        width:60%;
+    }
+
+    #bottom-gal
+    {
+        display:none;
+    }
+
+}
+
+@media only screen and (max-width: 600px)
+{
+    .header
+    {
+        display:none;
+    }
+
+    .header-small
+    {
+        display:inline;
+
+    }
+
+    .fa
+    {
+        position: relative;
+        margin:8px;
+    }
+
+    #home-link, #product-link, #gallery-link, #contact-link
+    {
+        display:none;
+    }
+
+    #phone
+    {
+        display:inline;
+    }
+
+    #main-logo
+    {
+        width: 60%;
+        text-align: center;
+        position:relative;
+    }
+
+    .bounce-arrow
+    {
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 900px)
+{
+    #big-social
+    {
+        display:inline;
+    }
+}
+
+@media only screen and (max-width: 899px)
+{
+    #small-social
+    {
+        display:inline;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px)
+{
+    #stacked-social
+    {
+        display:inline;
+    }
+
+    #small-social
+    {
+        display:none;
+    }
+
+}
+
+/* @keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 25px;}
+    100% {bottom: 0;}
+}
+
+.arrow {
+    animation: bouncing 2s infinite ease-in-out;
+    bottom: 0;
+    display: block;
+    position: relative;
+    width: 80px;
+} */
 
 /* Bob */
 @-webkit-keyframes hvr-bob {
@@ -210,16 +369,16 @@ footer
   }
   @keyframes hvr-bob {
     0% {
-      -webkit-transform: translateY(-8px);
-      transform: translateY(-8px);
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
     }
     50% {
       -webkit-transform: translateY(-4px);
       transform: translateY(-4px);
     }
     100% {
-      -webkit-transform: translateY(-8px);
-      transform: translateY(-8px);
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
     }
   }
   @-webkit-keyframes hvr-bob-float {
@@ -260,6 +419,53 @@ footer
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
+  }
+
+  .hvr-bob-arrow-top {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-animation-name: hvr-bob-float, hvr-bob;
+    animation-name: hvr-bob-float, hvr-bob;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+    position:relative;
+    margin-bottom:-45%;
+  }
+  
+  .hvr-bob-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-animation-name: hvr-bob-float, hvr-bob;
+    animation-name: hvr-bob-float, hvr-bob;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+    color:black;
   }
 
   /* Shrink */

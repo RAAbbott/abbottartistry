@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Abbott Artistry</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,61 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans+Condensed:300|Satisfy|PT+Sans+Narrow|Amatic+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
+    <div class="header-small" style='height:auto;'>
+        <div class="row" style='height:auto;'>
+        <!-- <div class="row">
+            <div class="col-sm-12 text-center">
+                <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+            </div>
+        </div> -->
+              <!-- Dropdown Trigger -->
+            <div class="col-sm-12 text-right">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1' style='color:black;background-color:rgb(252, 252, 239);'><i class="fa fa-bars" aria-hidden="true" style='position:relative;bottom:50%;'></i></a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content' style='color:black;'>
+                    <li><a href="#!"><i class='fa fa-close' style='color:#666;'></i></a></li>
+                    <li><a href="./index-test.html" style='color:#666;'>Home</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="https://www.etsy.com/shop/AbbottArtistry" style='color:#666;'>Shop</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="./gallery.html" style='color:#666;'>Gallery</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="./contact.html" style='color:#666;'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href='./index-test.html'><img class='hvr-grow' id='main-logo' src='./image-assets/abbott-artistry-logo-finished.png'></a>
+            </div>
+        </div>
+        <div class="row" style='position:relative;'>
+            <div class="col-sm-12 text-center top-links">
+                <a href="#" class="fa fa-facebook hvr-shrink"></a>
+                <a href="https://www.instagram.com/abbottartistry/" class="fa fa-instagram hvr-shrink"></a>
+                <a href="sms:+14355037540" class="fa fa-comment hvr-shrink" id='phone'></a>
+                <a href="mailto:macramebylizzy@gmail.com" class="fa fa-envelope-o hvr-shrink"></a>
+
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 text-center">
+                <a href='./index-test.html'><img class='hvr-grow' id='main-logo' src='./image-assets/abbott-artistry-logo-finished.png'></a>
+                <div class="col-sm-12 top-links">
+                    <a href="#" class="fa fa-facebook hvr-shrink"></a>
+                    <a href="https://www.instagram.com/abbottartistry/" class="fa fa-instagram hvr-shrink"></a>
+                    <a href="tel:4066335122" class="fa fa-phone hvr-shrink" id='phone'></a>
+                    <a href="mailto:macramebylizzy@gmail.com" class="fa fa-envelope-o hvr-shrink"></a>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div> -->
+    </div>
     <div class="header">
         <div class="row">
             <div class="col-sm-1"></div>
@@ -24,14 +74,14 @@
                 <a href='./index-test.html' class='link hvr-bob' id='home-link'>Home</a>
             </div>
             <div class="col-sm-2 text-center">
-                <a href='https://www.etsy.com/shop/AbbottArtistry' target='blank' class='link hvr-bob' id='product-link'>Shop</a>
+                <a href='https://www.etsy.com/shop/AbbottArtistry' target='_blank' class='link hvr-bob' id='product-link'>Shop</a>
             </div>
             <div class="col-sm-4">
-                <a href='#'><img class='hvr-grow' id='main-logo' src='./image-assets/abbott-artistry-logo-finished.png'></a>
-                <div class="col-sm-12">
+                <a href='./index-test.html'><img class='hvr-grow' id='main-logo' src='./image-assets/abbott-artistry-logo-finished.png'></a>
+                <div class="col-sm-12 top-links">
                     <a href="#" class="fa fa-facebook hvr-shrink"></a>
                     <a href="https://www.instagram.com/abbottartistry/" class="fa fa-instagram hvr-shrink"></a>
-                    <a href="tel:4066335122" class="fa fa-phone hvr-shrink"></a>
+                    <a href="tel:4066335122" class="fa fa-phone hvr-shrink" id='phone'></a>
                     <a href="mailto:macramebylizzy@gmail.com" class="fa fa-envelope-o hvr-shrink"></a>
                 </div>
             </div>
@@ -44,100 +94,132 @@
             <div class="col-sm-1"></div>
         </div>
     </div>
-    <div class="welcome">
+    <div class="welcome" id='welcome'>
         <div class="row">
             <div class="col-sm-12 text-center">
                 <p class='slogan'><strong>Quality, Handmade-To-Order Macramé And Crafts</strong></p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="bounce-arrow">
+                    <a href='#about-me' style='text-decoration:none;color:white;'><i class="fa fa-angle-down hvr-bob-arrow-top fa-md" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="row" id='about-me'></div>
     <!-- <h3 id='click-me' class='text-center' style='border-style:solid;border-color:black;'>Click me!</h3> -->
-    <div class="about text-center">
+    <div class="about text-center" id='about-section' data-aos="fade-up" data-aos-duration="2000">
         <div class="row">
             <div class="col-sm-12">
-                <span class='feature'><strong>Who is Abbott Artistry?</strong></span>
+                <br>
+                <span class='feature' data-aos="fade-up" data-aos-duration="1000"><strong>Who is Abbott Artistry?</strong></span>
             </div>
         </div>
         <div class="row top-border">
             <div class="col-sm-4">
                 <br>
-                <img src='./image-assets/Lizzy.JPG' id='lizzy-image' style='width:100%;'>
+                <img src='./image-assets/Lizzy.JPG' id='lizzy-image' style='width:100%;' data-aos="fade-up" data-aos-duration="1000">
             </div>
-            <div class="col-sm-8 text-left feature-details">
+            <div class="col-sm-8 text-left feature-details" data-aos="fade-up" data-aos-duration="1000">
                 <br>
                 <h3>Hi, my name is Lizzy Abbott</h3>
                 <br>
-                <p>I started Abbott Artistry in January of 2018...Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit. Sed semper erat urna, vitae feugiat nisl
-                efficitur vel. Curabitur interdum odio non convallis ullamcorper. Mauris
-                pretium ante ex, nec consequat felis convallis eget. Pellentesque in
-                nibh nibh. Duis aliquet, enim quis mollis egestas, mauris mauris 
-                suscipit libero, eu pellentesque massa justo vitae quam.
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                pretium ante ex, nec consequat felis convallis eget. Pellentesque in
-                nibh nibh. Duis aliquet, enim quis mollis egestas, mauris mauris 
-                suscipit libero, eu pellentesque massa justo vitae quam.
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                <p data-aos="fade-up" data-aos-duration="1000">I started Abbott Artistry in January of 2018. I had only 
+                been creating macrame art for about 4 or 5 months, but I loved to do it and was already
+                dreaming of having my own business and being able to sell my work! So, I decided to quit my
+                job and start doing macrame full-time. I have now been in business for almost a year, and it
+                has been amazing so far! I love making new designs and custom orders, and am always looking for
+                a challenge! I have done quite a few pieces for weddings and other events, including boho backdrops and
+                cake stands. In addition to macrame, I also make other crafts such as baby teethers and plant decor.
+                I would LOVE to make you a piece for your wedding or home space, check out my Etsy to have it shipped
+                right to you! If you have a request for a custom order, contact me using the form at the bottom of
+                the page or DM me on Instagram.
                 </p>
                 <br>
-                <a href='https://etsy.com/shop/abbottartistry' target='_blank'><i class='fa fa-shopping-bag fa-lg' style='float:left;color:rgb(230, 150, 3);margin-right:5%;margin-left:15%;'> Etsy Shop</i></a>
-                <a href='https://www.instagram.com/abbottartistry/' target='_blank'><i class='fa fa-instagram fa-lg' style='float:left;color:rgb(255, 40, 97);margin-right:5%;'> Instagram</i></a>
-                <a href='https://www.facebook.com/lizzylou.abbott' target='_blank'><i class='fa fa-facebook fa-lg' style='float:left;color:blue;'> Facebook</i></a>
+                <br>
+                <div id="big-social">
+                    <a href='https://etsy.com/shop/abbottartistry' target='_blank'><i class='fa fa-shopping-bag fa-lg' style='float:left;color:rgb(230, 150, 3);margin-right:5%;margin-left:15%;'> Etsy Shop</i></a>
+                    <a href='https://www.instagram.com/abbottartistry/' target='_blank'><i class='fa fa-instagram fa-lg' style='float:left;color:rgb(255, 40, 97);margin-right:5%;'> Instagram</i></a>
+                    <a href='https://www.facebook.com/lizzylou.abbott' target='_blank'><i class='fa fa-facebook fa-lg' style='float:left;color:blue;'> Facebook</i></a>
+                </div>
+                <div id="small-social">
+                    <a href='https://etsy.com/shop/abbottartistry' target='_blank'><i class='fa fa-shopping-bag fa-lg' style='float:left;color:rgb(230, 150, 3);margin-right:5%;'> Etsy Shop</i></a>
+                    <a href='https://www.instagram.com/abbottartistry/' target='_blank'><i class='fa fa-instagram fa-lg' style='float:left;color:rgb(255, 40, 97);margin-right:5%;'> Instagram</i></a>
+                    <a href='https://www.facebook.com/lizzylou.abbott' target='_blank'><i class='fa fa-facebook fa-lg' style='float:left;color:blue;'> Facebook</i></a>
+                </div>
+                <div id="stacked-social">
+                    <a href='https://etsy.com/shop/abbottartistry' target='_blank'><i class='fa fa-shopping-bag fa-lg' style='float:left;color:rgb(230, 150, 3);'> Etsy Shop</i></a>
+                    <br>
+                    <br>
+                    <a href='https://www.instagram.com/abbottartistry/' target='_blank'><i class='fa fa-instagram fa-lg' style='margin-top:5%;color:rgb(255, 40, 97);'> Instagram</i></a>
+                    <br>
+                    <br>
+                    <a href='https://www.facebook.com/lizzylou.abbott' target='_blank'><i class='fa fa-facebook fa-lg' style='float:left;color:blue;'> Facebook</i></a>
+                </div>
             </div>
         </div>
+        <!--<div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="bounce-arrow">
+                    <a href='#gallery-hash' style='text-decoration:none;color:black;'><i class="fa fa-angle-down hvr-bob-arrow fa-md" style='font-size:55px;' aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>-->
         <br>
         <br>
     </div>
     <br>
     <br>
-    <div class="white">
-        <div class='gallery-preview'>
+    <div class="row" id='gallery-hash'></div>
+    <!--<div class="white">-->
+        <div class='gallery-preview' id='our-work' data-aos="fade-up" data-aos-duration="2000">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <span class='feature'><strong>Our Work:</strong></span>
+                    <span class='feature' data-aos="fade-up" data-aos-duration="1000"><strong>Our Work:</strong></span>
                 </div>
             </div>
-            <div class="row top-border">
+            <div class="row top-border text-center" id='top-gal' data-aos="fade-left" data-aos-duration="2000">
                 <div class="col-sm-3 hvr-glow" style='margin-top:15px'>
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.31.05 PM.png' id='gal-image'></a>
+                    <a href='https://www.instagram.com/p/Bn4G-cagBWy/' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.31.05 PM.png' id='gal-image'></a>
                 </div>
                 <div class="col-sm-3 hvr-glow" style='margin-top:15px'>
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.32.34 PM.png' id='gal-image'></a>
+                    <a href='https://www.instagram.com/p/Bgb0HRanwRc/' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.32.34 PM.png' id='gal-image'></a>
                 </div>
                 <div class="col-sm-3 hvr-glow" style='margin-top:15px'>
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/macrame_edit_crop.jpeg' id='gal-image'></a>
+                    <a href='https://www.etsy.com/listing/646473553/macrame-plant-hanger-live-air-plant' target='_blank'><img src='./image-assets/macrame_edit_crop.jpeg' id='gal-image'></a>
                 </div> 
                 <div class="col-sm-3 hvr-glow" style='margin-top:15px'>
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.31.24 PM.png' id='gal-image'></a>
+                    <a href='https://www.instagram.com/p/BoKf4V5gmeq/' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.31.24 PM.png' id='gal-image'></a>
                 </div>
             </div>
             <br>
-            <div class="row">
+            <div class="row text-center" id='bottom-gal' data-aos="fade-right" data-aos-duration="2000">
                 <div class="col-sm-3 hvr-glow">
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/macrame-gal-edit.jpeg' id='gal-image'></a>
+                    <a href='https://www.etsy.com/listing/601061869/mini-rear-view-mirror-macrame-plant' target='_blank'><img src='./image-assets/macramecar1.jpg' id='gal-image'></a>
                 </div>
                 <div class="col-sm-3 hvr-glow">
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.31.41 PM.png' id='gal-image'></a>
+                    <a href='https://www.etsy.com/listing/605099788/gold-metal-modern-macrame-plant-hanger' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.31.41 PM.png' id='gal-image'></a>
                 </div>
                 <div class="col-sm-3 hvr-glow">
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.32.13 PM.png' id='gal-image'></a>
+                    <a href='https://www.instagram.com/p/Bhp_lpUng7n/' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.32.13 PM.png' id='gal-image'></a>
                 </div> 
                 <div class="col-sm-3 hvr-glow">
                     <br>
-                    <a href='https://instagram.com/abbottartistry' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.32.19 PM.png' id='gal-image'></a>
+                    <a href='https://www.instagram.com/p/BhsjUEAnLGa/' target='_blank'><img src='./image-assets/Screen Shot 2018-10-08 at 12.32.19 PM.png' id='gal-image'></a>
                 </div>
             </div>
-            <br>
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <a href='./gallery.html' class='link hvr-glow' id='learn-more'>See Full Gallery</a>
+                    <a href='./gallery.html' class='link hvr-glow' id='learn-more' >See Full Gallery</a>
                 </div>
             </div>
             <br>
@@ -145,8 +227,9 @@
             <br>
             <br>
         </div>
-    </div>
-    <div class="additional-info text-center">
+    <!--</div>--> 
+    <div class="row" id='faq-hash'></div>
+    <div class="additional-info text-center" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
             <div class="col-sm-12">
                 <br>
@@ -154,7 +237,54 @@
             </div>
         </div>
         <div class="row top-border">
-            <div class="col-sm-12 text-left feature-details">
+            <div class="col-sm-12 text-center">
+                <br>
+                <br>
+                <br>
+                <ul class="collapsible" data-collapsible="accordian">
+                    <li class='active'>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i><span class='good-text' style='font-size:20px;'>What Can We Make?</span></div>
+                        <div class="collapsible-body text-left feature-details"><p>We specialize in Macrame, and have made multiple pieces for various settings such as weddings, home and living areas, outdoor patios, and even for your vehicle!
+                            We LOVE custom orders, and we always make sure to add our special touch to whatever we make. Each piece is hand-made and can be customized to your liking. 
+                            We also offer other cute crafts, including a <a href='#' target='_blank' style='text-decoration:none;'>completely customizable piece for your little ones.</a>
+                        </p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">place</i><span class='good-text' style='font-size:20px;'>Where Can You Buy Our Products?</span></div>
+                        <div class="collapsible-body text-left"><p>You can buy our products <a href='https://www.etsy.com/shop/AbbottArtistry' target='_blank' style='text-decoration:none'>HERE</a> or by clicking the "Shop" button at the top of this page! You will go directly to our Etsy page where
+                        you will be able to search through our selection and order the macrame or craft of your choice! If you see a piece in our gallery
+                        that is not on our Etsy page, contact us with the details and we will make a custom piece especially for you!
+                        </p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i><span class='good-text' style='font-size:20px;'>What Material Do We Use?</span></div>
+                        <div class="collapsible-body text-left"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i><span class='good-text' style='font-size:20px;'>How Do Custom Orders Work?</span></div>
+                        <div class="collapsible-body text-left"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i><span class='good-text' style='font-size:20px;'>Are There Rental Pieces?</span></div>
+                        <div class="collapsible-body text-left"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="bounce-arrow">
+                    <a href='#contact-hash' style='text-decoration:none;color:black;'><i class="fa fa-angle-down hvr-bob-arrow fa-md" style='font-size:55px;' aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--<div class="row top-border" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-sm-12 text-left feature-details" data-aos="fade-up" data-aos-duration="1000">
                 <br>
                 <h3>What Can We Make?</h3>
                 <p>We specialize in Macrame, and have made multiple pieces for various settings such as weddings, home and living areas, outdoor patios, and even for your vehicle!
@@ -170,10 +300,11 @@
                 <br>
                 <br>
             </div>
-        </div>
+        </div>-->
     </div>
+    <div class="row" id='contact-hash'></div>
     <div class="white">
-        <div class="get-in-touch white">
+        <div class="get-in-touch white" data-aos="fade-up" data-aos-duration="1000">
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <br>
@@ -182,7 +313,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact">
+        <div class="contact" data-aos="fade-up" data-aos-duration="1000">
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <script type="text/javascript" defer src="https://www.123formbuilder.com/embed/4315463.js" data-role="form" data-default-width="650px"></script>
@@ -190,12 +321,12 @@
             </div>
         </div>
     </div>
-    <footer>
+    <div class='footer'>
         <div class="row">
             <div class="col-sm-12 text-center">
                 <br>
-                <a href="tel:4066335122" style='text-decoration:none;color:black'><span class="fa fa-phone hvr-shrink"> <span class='good-text'>(435) 503-7540</span></span></a>
-                <a href='mailto:macramebylizzy@gmail.com' style='text-decoration:none;color:black'><span class="fa fa-envelope-o hvr-shrink">  <span class='good-text'>abbottartistry@gmail.com</span></span></a>
+                <a href="" style='text-decoration:none;color:white;'><span class="fa fa-comment hvr-shrink"> <span class='good-text'>(435) 503-7540</span></span></a>
+                <a href='mailto:macramebylizzy@gmail.com' style='text-decoration:none;color:white'><span class="fa fa-envelope-o hvr-shrink">  <span class='good-text'>abbottartistry@gmail.com</span></span></a>
             </div>
         </div>
         <div class="row">
@@ -205,6 +336,52 @@
                 <br>
             </div>
         </div>
-    </footer>
-    <script src='./index.js'></script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+            $('.dropdown-trigger').dropdown();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({            
+            once: true,
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+          
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+          
+                // Store hash
+                var hash = this.hash;
+          
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                }, 1000, function(){
+             
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+                });
+              } // End if
+            });
+        });
+    </script>
 </body>

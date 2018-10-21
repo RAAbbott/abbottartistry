@@ -1,15 +1,33 @@
-html,body
+@media only screen and (min-width: 1500px)
+{ 
+
+    #welcome
+    {
+        height:700px;
+    }
+
+    #about-section
+    {
+        margin-left:25%;
+        margin-right:25%;
+    }
+}
+
+
+
+html
 {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 body 
 {
-    background-color: rgb(252, 252, 239);
+    /* background-color: rgb(252, 252, 239); */
+    background-color: white;
 }
 
 .good-text
@@ -288,6 +306,84 @@ h3
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.footer
+{
+    /* background-color: rgb(252, 252, 239); */
+    background-color: #666;
+    color:white !important;
+}
+
+#phone
+{
+    display:none;
+}
+
+.header-small
+{
+    height:auto;
+    display:none;
+}
+
+.small-section
+{
+    display:none;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .header
+    {
+        display:none;
+    }
+
+    .header-small
+    {
+        display:inline;
+
+    }
+
+    .fa
+    {
+        position: relative;
+        margin:8px;
+    }
+
+    #home-link, #product-link, #gallery-link, #contact-link
+    {
+        display:none;
+    }
+
+    #phone
+    {
+        display:inline;
+    }
+
+    #main-logo
+    {
+        width: 60%;
+        text-align: center;
+        position:relative;
+    }
+
+    .bounce-arrow
+    {
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 1025px)
+{
+    .small-section
+    {
+        display:inline;
+    }
+
+    .pixlee-widget
+    {
+        display:none;
+    }
 }
 
 
