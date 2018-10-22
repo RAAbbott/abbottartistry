@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<a lang="en">
+<html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Abbott Artistry</title>
@@ -13,6 +14,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_rd7lXKBQiXtho9Br22N6v");
+       })();
+    </script>
 </head>
 <body>
     <div class="header-small" style='height:auto;'>
@@ -244,29 +251,27 @@
                 <ul class="collapsible" data-collapsible="accordian">
                     <li class='active'>
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i><span class='good-text' style='font-size:20px;'>What Can We Make?</span></div>
-                        <div class="collapsible-body text-left feature-details"><p>We specialize in Macrame, and have made multiple pieces for various settings such as weddings, home and living areas, outdoor patios, and even for your vehicle!
+                        <div class="collapsible-body text-left feature-details"><p>We specialize in Macrame, and have made multiple pieces for various settings such as weddings, home and living areas, outdoor patios, and 
+                            <a href='https://www.etsy.com/listing/601061869/mini-rear-view-mirror-macrame-plant' target='_blank' style='text-decoration:none;'>even for your vehicle!</a>
                             We LOVE custom orders, and we always make sure to add our special touch to whatever we make. Each piece is hand-made and can be customized to your liking. 
-                            We also offer other cute crafts, including a <a href='#' target='_blank' style='text-decoration:none;'>completely customizable piece for your little ones.</a>
+                            We also offer other cute crafts, including a <a href='https://www.etsy.com/listing/648517479/darling-custom-baby-pacifierteething' target='_blank' style='text-decoration:none;'>completely customizable piece for your little ones.</a>
                         </p></div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">place</i><span class='good-text' style='font-size:20px;'>Where Can You Buy Our Products?</span></div>
-                        <div class="collapsible-body text-left"><p>You can buy our products <a href='https://www.etsy.com/shop/AbbottArtistry' target='_blank' style='text-decoration:none'>HERE</a> or by clicking the "Shop" button at the top of this page! You will go directly to our Etsy page where
-                        you will be able to search through our selection and order the macrame or craft of your choice! If you see a piece in our gallery
-                        that is not on our Etsy page, contact us with the details and we will make a custom piece especially for you!
+                        <div class="collapsible-body text-left"><p>You can buy our products <a href='https://www.etsy.com/shop/AbbottArtistry' target='_blank' style='text-decoration:none'>HERE</a> or by clicking the "Shop" button at the top of this page! 
+                        You will go directly to our Etsy page where you will be able to search through our selection and order the macrame or craft of your choice! 
+                        Some pieces in our gallery are not on our Etsy page as they are custom orders, if you see one you like just contact us with the details and we will make a custom piece especially for you!
                         </p></div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">whatshot</i><span class='good-text' style='font-size:20px;'>What Material Do We Use?</span></div>
-                        <div class="collapsible-body text-left"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="collapsible-body text-left"><p>We use high quality 100% cotton cord for our macrame pieces!</p></div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">whatshot</i><span class='good-text' style='font-size:20px;'>How Do Custom Orders Work?</span></div>
-                        <div class="collapsible-body text-left"><p>Lorem ipsum dolor sit amet.</p></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">whatshot</i><span class='good-text' style='font-size:20px;'>Are There Rental Pieces?</span></div>
-                        <div class="collapsible-body text-left"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="collapsible-body text-left"><p>You can contact us by sending a <a href='./contact.html' target='_blank' style='text-decoration:none'>message</a>, 
+                        emailing us at <a href='mailto:macramebylizzy@gmail.com' style='text-decoration:none'>macramebylizzy@gmail.com</a>, or by sending a DM on <a href='https://www.instagram.com/AbbottArtistry' target='_blank' style='text-decoration:none'>our Instagram</a></p></div>
                     </li>
                 </ul>
             </div>
@@ -313,14 +318,57 @@
                 </div>
             </div>
         </div>
-        <div class="contact" data-aos="fade-up" data-aos-duration="1000">
+        <div class="success" style='display:none;'>
             <div class="row">
-                <div class="col-sm-12 text-center">
-                    <script type="text/javascript" defer src="https://www.123formbuilder.com/embed/4315463.js" data-role="form" data-default-width="650px"></script>
+                <div class="col-sm-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                    <br>
+                    <h3>Thank You For Reaching Out!</h3>
+                    <h3 style='font-size:20px;'>We'll get back to you as soon as possible</h3>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
+        <div class="contact" data-aos="fade-up" data-aos-duration="1000" style='margin-left:15%;margin-right:15%;'>
+            <form method='post' name='contactForm' action=''>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for='firstName'>First Name:</label><br>
+                        <input type='text' name='firstName' id='firstName'>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for='lastName'>Last Name:</label><br>
+                        <input type='text' name='lastName' id='lastName'>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for='email'>Email Address:</label><br>
+                        <input type='email' name='email' id='email' class='validate'>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for='message'>Message:</label><br>
+                        <textarea name='message' class='materialize-textarea' id='message'></textarea>
+                    </div>
+                </div>
+                <!--123 Form Builder Javascript Plugin-->
+                <!-- <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <script type="text/javascript" defer src="https://www.123formbuilder.com/embed/4315463.js" data-role="form" data-default-width="650px"></script>
+                    </div>
+                </div> -->
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                            <button type='button' onClick='sendMail()' class='link hvr-glow submit' id='learn-more'>Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    <br>
+    <br>
     <div class='footer'>
         <div class="row">
             <div class="col-sm-12 text-center">
@@ -338,6 +386,34 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function sendMail() {
+            let message = $('#message').val();
+            let firstName = $('#firstName').val();
+            let lastName = $('#lastName').val()
+            let email = $("#email").val();
+
+            if (!message||!firstName||!lastName||!email)
+            {
+                alert("Please fill in all fields before submitting the form")
+            }
+
+            else{
+                var template_params = {
+                    "email": email,
+                    "from_name" : firstName + " " + lastName,
+                    "message_html": $('#message').val(),
+                }
+                var service_id = "default_service";
+                var template_id = "template_j9bjmPOO";
+                emailjs.send(service_id,template_id,template_params);
+
+                document.querySelector('.get-in-touch').style.display = 'none';
+                document.querySelector('.contact').style.display = 'none';
+                document.querySelector('.success').style.display = 'inline';
+            }
+        }   
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
@@ -351,14 +427,10 @@
         AOS.init({            
             once: true,
         });
-    </script>
-    <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
             var instances = M.Collapsible.init(elems, options);
         });
-    </script>
-    <script>
         $(document).ready(function(){
             // Add smooth scrolling to all links
             $("a").on('click', function(event) {
@@ -385,3 +457,4 @@
         });
     </script>
 </body>
+</html>

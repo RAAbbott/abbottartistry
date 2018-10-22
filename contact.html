@@ -13,6 +13,12 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+        <script type="text/javascript">
+        (function(){
+          emailjs.init("user_rd7lXKBQiXtho9Br22N6v");
+        })();
+    </script>
     </head>
 
 <body>
@@ -108,7 +114,7 @@
         </div>
     </div>
     <div class="contact-us" style='margin-left:15%;margin-right:15%'>
-        <div class="row" data-aos="fade-up" data-aos-duration="2000">
+        <div class="row get-in-touch" data-aos="fade-up" data-aos-duration="2000">
             <div class="col-sm-12 text-center">
                 <p style='font-size:30px;font-weight:bold;position:relative;top:50%;color:#666;font-family:Open Sans Condensed, sans-serif;'>
                     Let us know if you have ANY questions, we want to hear from you!
@@ -117,11 +123,55 @@
         </div>
         <br>
         <br>
-        <div class="row" data-aos="fade-up" data-aos-duration="2000">
-            <div class="col-sm-12">
-                <script type="text/javascript" id='form' defer src="https://www.123formbuilder.com/embed/4315463.js" data-role="form" data-default-width="650px"></script>
+        <br>
+        <div class="white">
+                <div class="success" style='display:none;'>
+                    <div class="row">
+                        <div class="col-sm-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <br>
+                            <h3>Thank You For Reaching Out!</h3>
+                            <h3 style='font-size:20px;'>We'll get back to you as soon as possible</h3>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact" data-aos="fade-up" data-aos-duration="1000" style='margin-left:15%;margin-right:15%;'>
+                    <form method='post' name='contactForm' action=''>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for='firstName'>First Name:</label><br>
+                                <input type='text' name='firstName' id='firstName'>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for='lastName'>Last Name:</label><br>
+                                <input type='text' name='lastName' id='lastName'>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for='email'>Email Address:</label><br>
+                                <input type='email' name='email' id='email' class='validate'>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for='message'>Message:</label><br>
+                                <textarea name='message' class='materialize-textarea' id='message'></textarea>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-sm-12">
+                                <button type='button' onClick='sendMail()' class='link hvr-glow submit' id='learn-more'>Submit</button>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
     </div>
     <div class='footer'>
         <div class="row">
@@ -140,6 +190,34 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function sendMail() {
+            let message = $('#message').val();
+            let firstName = $('#firstName').val();
+            let lastName = $('#lastName').val()
+            let email = $("#email").val();
+
+            if (!message||!firstName||!lastName||!email)
+            {
+                alert("Please fill in all fields before submitting the form")
+            }
+
+            else{
+                var template_params = {
+                    "email": email,
+                    "from_name" : firstName + " " + lastName,
+                    "message_html": $('#message').val(),
+                }
+                var service_id = "default_service";
+                var template_id = "template_j9bjmPOO";
+                emailjs.send(service_id,template_id,template_params);
+
+                document.querySelector('.get-in-touch').style.display = 'none';
+                document.querySelector('.contact').style.display = 'none';
+                document.querySelector('.success').style.display = 'inline';
+            }
+        }   
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
