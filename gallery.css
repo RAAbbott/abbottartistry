@@ -3,7 +3,7 @@
 
     #welcome
     {
-        height:700px;
+        height:300px;
     }
 
     #about-section
@@ -45,12 +45,28 @@ body
     padding-top: 2%;
     padding-right: 0%;
     padding-bottom: 2%;
-    height: auto;
     background-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
+}
+
+#big-row
+{
+    transition: all 0.8s !important;
+    height:90px;
+}
+
+.header-border
+{
+    border-bottom: 1px solid #666;
+}
+
+@media only screen and (min-width: 600px)
+{
+    .header
+    {
+        position: fixed;
+        top:0px;
+        z-index: 999;
+    }
 }
 
 .top-border
@@ -83,9 +99,11 @@ body
     height: 300px;
     /* font-family: 'PT Sans Narrow', sans-serif; */
     font-family: 'Amatic SC';
-    font-size: 55px;
+    font-size: 60px;
     color: white;
-    background-image: url("./image-assets/macrame2edit.jpg");
+    /* background-image: url("./image-assets/macrame2edit.jpg"); */
+    background-image: url("./fromAirdrop/IMG_3226.jpg");
+    image-orientation: from-image;
     background-size: cover;
 }
 
@@ -196,6 +214,7 @@ h3
 {
     width: 75%;
     text-align: center;
+    transition: all 0.2s !important;
 }
 
 .link
@@ -208,45 +227,9 @@ h3
     top: 50%;
 }
 
-.featured-title
+.row
 {
-    font-family: 'Open Sans Condensed', sans-serif; 
-    font-size: 40px;
-    border-style: solid;
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
-}
-
-.feature-details p
-{
-    color: rgb(34, 30, 30);
-}
-
-.feature-details h3
-{
-    color: rgb(0, 0, 0);
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-.featured-row-1
-{
-    position: relative;
-    top: -15px;
-    height: 330px;
-}
-
-.featured-row-2
-{
-    position: relative;
-    top: -15px;
-    border-style: solid;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-color: grey;
+    transition: all 0.8s !important;
 }
 
 #learn-more
@@ -259,41 +242,6 @@ h3
     border-width: 2px;
     padding: 5px;
     background-color: rgb(252, 252, 239);
-}
-
-
-#featured1
-{
-    width: 100%;
-    position: relative;
-    /* left: -50px; */
-    top: 0px;
-}
-
-#featured1b
-{
-    width: 100%;
-    position: relative;
-    /* left: -50px; */
-    top: 0px;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 1px;
-}
-
-#featured2
-{
-    width: 100%;
-    position: relative;
-    top: 0px;
-}
-
-#featured2s
-{
-    width: 100%;
-    position: relative;
-    top: 0px;
 }
 
 .buy-now
@@ -324,6 +272,9 @@ h3
 {
     height:auto;
     display:none;
+    position:fixed;
+    z-index: 999;
+    background-color: white;
 }
 
 .small-section
@@ -383,6 +334,33 @@ h3
     .pixlee-widget
     {
         display:none;
+    }
+}
+
+@media only screen and (min-width: 900px)
+{
+    .under-fixed
+    {
+        position:relative;
+        margin-top:180px;
+    }
+}
+
+@media only screen and (max-width: 899px)
+{
+    .under-fixed
+    {
+        position:relative;
+        margin-top:120px;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .under-fixed
+    {
+        position:relative;
+        margin-top:200px;
     }
 }
 

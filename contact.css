@@ -3,7 +3,7 @@
 
     #welcome
     {
-        height:700px;
+        height:300px;
     }
 
     #about-section
@@ -43,12 +43,28 @@ body
     padding-top: 2%;
     padding-right: 0%;
     padding-bottom: 2%;
-    height: auto;
     background-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
+}
+
+#big-row
+{
+    transition: all 0.8s !important;
+    height:90px;
+}
+
+.header-border
+{
+    border-bottom: 1px solid #666;
+}
+
+@media only screen and (min-width: 600px)
+{
+    .header
+    {
+        position: fixed;
+        top:0px;
+        z-index: 999;
+    }
 }
 
 .top-border
@@ -81,9 +97,11 @@ body
     height: 300px;
     /* font-family: 'PT Sans Narrow', sans-serif; */
     font-family: 'Amatic SC';
-    font-size: 55px;
+    font-size: 60px;
     color: white;
-    background-image: url("./image-assets/macrame2edit.jpg");
+    /* background-image: url("./image-assets/macrame2edit.jpg"); */
+    background-image: url("./fromAirdrop/IMG_3226.jpg");
+    image-orientation: from-image;
     background-size: cover;
 }
 
@@ -93,6 +111,11 @@ body
     top: 50px;
     right: 0px;
 
+}
+
+.row
+{
+    transition: all 0.8s !important;
 }
 
 .feature
@@ -194,6 +217,7 @@ h3
 {
     width: 75%;
     text-align: center;
+    transition: all 0.2s !important;
 }
 
 .link
@@ -322,6 +346,9 @@ h3
 {
     height:auto;
     display:none;
+    position:fixed;
+    z-index: 999;
+    background-color: white;
 }
 
 @media only screen and (max-width: 600px)
@@ -363,6 +390,33 @@ h3
     .bounce-arrow
     {
         display:none;
+    }
+}
+
+@media only screen and (min-width: 900px)
+{
+    .under-fixed
+    {
+        position:relative;
+        margin-top:180px;
+    }
+}
+
+@media only screen and (max-width: 899px)
+{
+    .under-fixed
+    {
+        position:relative;
+        margin-top:120px;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .under-fixed
+    {
+        position:relative;
+        margin-top:200px;
     }
 }
 
