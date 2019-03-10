@@ -101,8 +101,8 @@ body
     font-family: 'Amatic SC';
     font-size: 60px;
     color: white;
-    /* background-image: url("./image-assets/macrame2edit.jpg"); */
-    background-image: url("./fromAirdrop/IMG_3226.jpg");
+    background-image: url("./image-assets/macrame2edit.jpg");
+    /* background-image: url("./fromAirdrop/IMG_3226.jpg"); */
     image-orientation: from-image;
     background-size: cover;
 }
