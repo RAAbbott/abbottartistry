@@ -1,7 +1,7 @@
 # abbottartistry
 Website for Abbott Artistry
 
-This was my very first web development project I completed: a website for my wife's macrame business, Abbott Artistry. 
+This was one of my very first web development projects I completed: a website for my wife's macrame business, Abbott Artistry. 
 I initially created it using just HTML and CSS, but added more functionality and other things such as smooth scrolling with JavaScript.
 Before starting the project, I created a wireframe to use as a guide throughout development. 
 
