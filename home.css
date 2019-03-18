@@ -59,6 +59,7 @@ body
 {
     /* background-color: rgb(252, 252, 239); */
     background-color: white;
+    overflow-x: hidden;
 }
 
 .good-text
